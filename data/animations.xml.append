@@ -1,0 +1,415 @@
+<!--effects-->
+<FTL>
+</FTL>
+
+<!--Projectiles-->
+<FTL>
+<animSheet name="laser_bio_oe_left" w="60" h="30" fw="60" fh="30">projectiles/laser_bio_oe_left.png</animSheet>
+<anim name="laser_bio_oe_left">
+	<sheet>laser_bio_oe_left</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>0.3</time>
+</anim>
+<animSheet name="laser_bio_oe_left" w="60" h="30" fw="60" fh="30">projectiles/laser_bio_oe_right.png</animSheet>
+<anim name="laser_bio_oe_left">
+	<sheet>laser_bio_oe_left</sheet>
+	<desc length="1" x="0" y="0" />
+	<time>0.3</time>
+</anim>
+</FTL>
+
+<!--Weapons-->
+<FTL>
+</FTL>
+
+<!--Crew-->
+<FTL>
+
+<animSheet fh="35" fw="35" h="455" w="350" name="oe_bird">people/oe_bird_base.png</animSheet>
+<animSheet fh="35" fw="35" h="455" w="350" name="oe_bird_s">people/oe_bird_s_base.png</animSheet>
+<anim name="oe_bird_clone">
+	<sheet>oe_bird</sheet>
+	<desc y="2" x="0" length="7" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_death_right">
+	<sheet>oe_bird</sheet>
+	<desc y="0" x="3" length="5" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_death_left">
+	<sheet>oe_bird</sheet>
+	<desc y="2" x="0" length="5" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_walk_down">
+	<sheet>oe_bird</sheet>
+	<desc y="12" x="0" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_walk_right">
+	<sheet>oe_bird</sheet>
+	<desc y="12" x="4" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_walk_up">
+	<sheet>oe_bird</sheet>
+	<desc y="11" x="0" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_walk_left">
+	<sheet>oe_bird</sheet>
+	<desc y="11" x="4" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_shoot_down">
+	<sheet>oe_bird</sheet>
+	<desc y="10" x="0" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_shoot_right">
+	<sheet>oe_bird</sheet>
+	<desc y="10" x="3" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_shoot_up">
+	<sheet>oe_bird</sheet>
+	<desc y="10" x="6" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_shoot_left">
+	<sheet>oe_bird</sheet>
+	<desc y="1" x="0" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_fire_down">
+	<sheet>oe_bird</sheet>
+	<desc y="9" x="0" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_fire_right">
+	<sheet>oe_bird</sheet>
+	<desc y="9" x="4" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_fire_up">
+	<sheet>oe_bird</sheet>
+	<desc y="8" x="0" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_fire_left">
+	<sheet>oe_bird</sheet>
+	<desc y="8" x="4" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_repair">
+	<sheet>oe_bird</sheet>
+	<desc y="7" x="0" length="9" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_punch_up">
+	<sheet>oe_bird</sheet>
+	<desc y="1" x="3" length="7" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_punch_down">
+	<sheet>oe_bird</sheet>
+	<desc y="6" x="0" length="7" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_teleport">
+	<sheet>oe_bird</sheet>
+	<desc y="3" x="0" length="7" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_type_right">
+	<sheet>oe_bird</sheet>
+	<desc y="5" x="0" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_type_left">
+	<sheet>oe_bird</sheet>
+	<desc y="5" x="4" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_type_up">
+	<sheet>oe_bird</sheet>
+	<desc y="4" x="0" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_type_down">
+	<sheet>oe_bird</sheet>
+	<desc y="4" x="4" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_crewLaser">
+	<sheet>oe_bird</sheet>
+	<desc y="0" x="1" length="1" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_portrait">
+	<sheet>oe_bird</sheet>
+	<desc y="0" x="0" length="1" />
+	<time>1</time>
+</anim>
+
+<animSheet fh="35" fw="35" h="455" w="350" name="oe_bird_tech">people/oe_bird_tech_base.png</animSheet>
+<animSheet fh="35" fw="35" h="455" w="350" name="oe_bird_tech_s">people/oe_bird_tech_s_base.png</animSheet>
+<anim name="oe_bird_tech_clone">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="2" x="0" length="7" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_tech_death_right">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="0" x="3" length="5" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_tech_death_left">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="2" x="0" length="5" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_tech_walk_down">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="12" x="0" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_tech_walk_right">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="12" x="4" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_tech_walk_up">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="11" x="0" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_tech_walk_left">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="11" x="4" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_tech_shoot_down">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="10" x="0" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_shoot_right">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="10" x="3" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_shoot_up">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="10" x="6" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_shoot_left">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="1" x="0" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_fire_down">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="9" x="0" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_fire_right">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="9" x="4" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_fire_up">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="8" x="0" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_fire_left">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="8" x="4" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_repair">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="7" x="0" length="9" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_punch_up">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="1" x="3" length="7" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_punch_down">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="6" x="0" length="7" />
+	<time>1.0</time>
+</anim>
+<anim name="oe_bird_tech_teleport">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="3" x="0" length="7" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_tech_type_right">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="5" x="0" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_tech_type_left">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="5" x="4" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_tech_type_up">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="4" x="0" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_tech_type_down">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="4" x="4" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="oe_bird_tech_crewLaser">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="0" x="1" length="1" />
+	<time>0.5</time>
+</anim>
+<anim name="oe_bird_tech_portrait">
+	<sheet>oe_bird_tech</sheet>
+	<desc y="0" x="0" length="1" />
+	<time>1</time>
+</anim>
+
+<animSheet fh="35" fw="35" h="455" w="350" name="unique_oe_jay">people/unique_oe_jay_base.png</animSheet>
+<animSheet fh="35" fw="35" h="455" w="350" name="unique_oe_jay_s">people/unique_oe_jay_s_base.png</animSheet>
+<anim name="unique_oe_jay_clone">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="2" x="0" length="7" />
+	<time>0.75</time>
+</anim>
+<anim name="unique_oe_jay_death_right">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="0" x="3" length="5" />
+	<time>0.75</time>
+</anim>
+<anim name="unique_oe_jay_death_left">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="2" x="0" length="5" />
+	<time>0.75</time>
+</anim>
+<anim name="unique_oe_jay_walk_down">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="12" x="0" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="unique_oe_jay_walk_right">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="12" x="4" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="unique_oe_jay_walk_up">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="11" x="0" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="unique_oe_jay_walk_left">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="11" x="4" length="4" />
+	<time>0.5</time>
+</anim>
+<anim name="unique_oe_jay_shoot_down">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="10" x="0" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_shoot_right">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="10" x="3" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_shoot_up">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="10" x="6" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_shoot_left">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="1" x="0" length="3" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_fire_down">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="9" x="0" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_fire_right">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="9" x="4" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_fire_up">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="8" x="0" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_fire_left">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="8" x="4" length="4" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_repair">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="7" x="0" length="9" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_punch_up">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="1" x="3" length="7" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_punch_down">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="6" x="0" length="7" />
+	<time>1.0</time>
+</anim>
+<anim name="unique_oe_jay_teleport">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="3" x="0" length="7" />
+	<time>0.5</time>
+</anim>
+<anim name="unique_oe_jay_type_right">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="5" x="0" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="unique_oe_jay_type_left">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="5" x="4" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="unique_oe_jay_type_up">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="4" x="0" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="unique_oe_jay_type_down">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="4" x="4" length="4" />
+	<time>0.75</time>
+</anim>
+<anim name="unique_oe_jay_crewLaser">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="0" x="1" length="1" />
+	<time>0.5</time>
+</anim>
+<anim name="unique_oe_jay_portrait">
+	<sheet>unique_oe_jay</sheet>
+	<desc y="0" x="0" length="1" />
+	<time>1</time>
+</anim>
+</FTL>
+
+<!--Renegades-->
+<FTL>
+</FTL>

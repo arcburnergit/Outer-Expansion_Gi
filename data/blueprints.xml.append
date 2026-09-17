@@ -1,0 +1,1068 @@
+<!--Ships-->
+<FTL>
+
+
+</FTL>
+
+<!--Artillery-->
+<FTL>
+</FTL>
+
+<!--Augments-->
+<FTL>
+</FTL>
+
+<!--Weapons-->
+<FTL>
+</FTL>
+
+<!--Burst Drone-->
+<FTL>
+
+<weaponBlueprint name="OE_BEAM_BIRD_BURST_1">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<damage>0</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<color> <!-- Color only works for beams -->
+		<r>0</r>
+		<g>0</g>
+		<b>0</b>
+		<a>0</a>
+	</color>
+	<speed>1</speed>
+	<rarity>0</rarity>
+	<image>oe_invisible</image>
+	<length>10</length>
+	<weaponArt>beam_1</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="OE_BEAM_BIRD_BURST_2">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<damage>0</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<color> <!-- Color only works for beams -->
+		<r>0</r>
+		<g>0</g>
+		<b>0</b>
+		<a>0</a>
+	</color>
+	<speed>1</speed>
+	<rarity>0</rarity>
+	<image>oe_invisible</image>
+	<length>20</length>
+	<weaponArt>beam_1</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="OE_BEAM_BIRD_BURST_3">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<damage>0</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<color> <!-- Color only works for beams -->
+		<r>0</r>
+		<g>0</g>
+		<b>0</b>
+		<a>0</a>
+	</color>
+	<speed>1</speed>
+	<rarity>0</rarity>
+	<image>oe_invisible</image>
+	<length>40</length>
+	<weaponArt>beam_1</weaponArt>
+</weaponBlueprint>
+
+<blueprintList name="LIST_AMP_OE_BIRD_BURST_1">
+	<name>OE_COMBAT_BIRD_BURST_1</name>
+	<name>OE_COMBAT_BIRD_BURST_2</name>
+	<name>OE_COMBAT_BIRD_BURST_3</name>
+</blueprintList>
+<droneBlueprint name="OE_COMBAT_BIRD_BURST_1">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Amp Burst</title>
+	<short>Burst [2]</short>
+	<desc>[CURRENT POWER: 2] Unlike your standard drone, this specialized amp drone can fire multiple times at each target.
+
+This drone fires 2 shots.
+	</desc>
+	<power>2</power>
+	<cooldown>2000</cooldown>
+	<dodge>0</dodge>
+	<speed>10</speed>
+	<cost>70</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_burst_a1</droneImage>
+	<weaponBlueprint>OE_BEAM_BIRD_BURST_1</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_BURST_1_ENEMY">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Amp Burst</title>
+	<short>Burst [2]</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<power>3</power>
+	<cooldown>2000</cooldown>
+	<dodge>0</dodge>
+	<speed>10</speed>
+	<cost>70</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_burst_a1</droneImage>
+	<weaponBlueprint>OE_BEAM_BIRD_BURST_1</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_BURST_2">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Amp Burst</title>
+	<short>Burst [3]</short>
+	<desc>[CURRENT POWER: 3] Unlike your standard drone, this specialized amp drone can fire multiple times at each target.
+
+This drone fires 3 shots.
+	</desc>
+	<power>3</power>
+	<cooldown>3000</cooldown>
+	<dodge>0</dodge>
+	<speed>8</speed>
+	<cost>70</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_burst_a2</droneImage>
+	<weaponBlueprint>OE_BEAM_BIRD_BURST_2</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_BURST_2_ENEMY">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Amp Burst</title>
+	<short>Burst [3]</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<power>4</power>
+	<cooldown>3000</cooldown>
+	<dodge>0</dodge>
+	<speed>8</speed>
+	<cost>70</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_burst_a2</droneImage>
+	<weaponBlueprint>OE_BEAM_BIRD_BURST_2</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_BURST_3">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Amp Burst</title>
+	<short>Burst [4]</short>
+	<desc>[CURRENT POWER: 4] Unlike your standard drone, this specialized amp drone can fire multiple times at each target.
+
+This drone fires 4 shots.
+	</desc>
+	<power>4</power>
+	<cooldown>4000</cooldown>
+	<dodge>0</dodge>
+	<speed>6</speed>
+	<cost>70</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_burst_a3</droneImage>
+	<weaponBlueprint>OE_BEAM_BIRD_BURST_3</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+</FTL>
+<!--Bio Drone-->
+<FTL>
+<weaponBlueprint name="OE_LASER_BIO_DRONE">
+	<type>LASER</type>
+	<title>Drone Laser</title>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>1</persDamage>
+	<shots>1</shots>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>200</speed>
+	<rarity>0</rarity>
+	<image>laser_bio</image>
+	<statBoosts>
+		<statBoost name="deathEffect" save="OE_BIO_DRONE_DEATHEFF">
+			<boostType>SET</boostType>
+			<deathEffect>
+				<sysDamage>2</sysDamage>
+				<fireChance>10</fireChance>
+				<friendlyFire>true</friendlyFire>
+				<shipFriendlyFire>true</shipFriendlyFire>
+			</deathEffect>
+			<shipTarget>ALL</shipTarget>
+			<crewTarget>ENEMIES</crewTarget>
+			<droneTarget>CREW</droneTarget>
+			<maxStacks>1</maxStacks>
+			<duration>20</duration>
+			<boostAnim>bio_poison</boostAnim>
+		</statBoost>
+	</statBoosts>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="OE_LASER_BIO_DRONE_3">
+	<type>BURST</type>
+	<drone_targetable>0</drone_targetable>
+	<title>Drone Laser</title>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>1</persDamage>
+	<shots>1</shots>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<speed>200</speed>
+	<rarity>0</rarity>
+	<projectiles>
+		<projectile count="1" fake="false">laser_bio_oe_left</projectile>
+		<projectile count="1" fake="false">laser_bio_oe_right</projectile>
+	</projectiles>
+	<statBoosts>
+		<statBoost name="deathEffect" load="OE_BIO_DRONE_DEATHEFF" />
+	</statBoosts>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+</weaponBlueprint>
+
+<droneBlueprint name="OE_COMBAT_BIRD_BIO_1">
+	<type>COMBAT</type>
+	<tip>tip_drone_generic</tip>
+	<title>Bio Drone Mk. I</title>
+	<short>Bio I</short>
+	<desc>A drone that specifically targets enemy crewmembers. Does 15 personal damage and inflicts enemy crew with a death effect that does 2 system damage and creates a fire for 20 seconds.</desc>
+	<power>1</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>35</speed>
+	<cost>40</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_bio_1</droneImage>
+	<weaponBlueprint>OE_LASER_BIO_DRONE</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="OE_COMBAT_BIRD_BIO_2">
+	<type>COMBAT</type>
+	<tip>tip_drone_generic</tip>
+	<title>Bio Drone Mk. II</title>
+	<short>Bio II</short>
+	<desc>A drone that specifically targets enemy crewmembers, faster than the Mk 1. Does 15 personal damage and inflicts enemy crew with a death effect that does 2 system damage and creates a fire for 20 seconds.</desc>
+	<power>2</power>
+	<cooldown>500</cooldown>
+	<dodge>0</dodge>
+	<speed>60</speed>
+	<cost>60</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_bio_2</droneImage>
+	<weaponBlueprint>OE_LASER_BIO_DRONE</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="OE_COMBAT_BIRD_BIO_3">
+	<type>COMBAT</type>
+	<tip>tip_drone_generic</tip>
+	<title>Bio Drone Mk. III</title>
+	<short>Bio III</short>
+	<desc>A drone that specifically targets enemy crewmembers, faster than the Mk 2, fires 2 shots at once. Does 15 personal damage and inflicts enemy crew with a death effect that does 2 system damage and creates a fire for 20 seconds.</desc>
+	<power>3</power>
+	<cooldown>100</cooldown>
+	<dodge>0</dodge>
+	<speed>85</speed>
+	<cost>80</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_bio_3</droneImage>
+	<weaponBlueprint>OE_LASER_BIO_DRONE_3</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+</FTL>
+<!--Bio Enemy Drone-->
+<FTL>
+<droneBlueprint name="OE_COMBAT_BIRD_BIO_1_ENEMY">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Bio Drone Mk. I</title>
+	<short>Bio I</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>35</speed>
+	<cost>40</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_bio_1</droneImage>
+	<weaponBlueprint>OE_LASER_BIO_DRONE</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="OE_COMBAT_BIRD_BIO_2_ENEMY">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Bio Drone Mk. II</title>
+	<short>Bio II</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<power>3</power>
+	<cooldown>500</cooldown>
+	<dodge>0</dodge>
+	<speed>60</speed>
+	<cost>60</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_bio_2</droneImage>
+	<weaponBlueprint>OE_LASER_BIO_DRONE</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+</FTL>
+<!--Sweeper Drone (Unused)-->
+<FTL>
+<weaponBlueprint name="OE_BEAM_BIRD_DELETE">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<damage>0</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<color> <!-- Color only works for beams -->
+		<r>0</r>
+		<g>0</g>
+		<b>0</b>
+		<a>0</a>
+	</color>
+	<speed>1</speed>
+	<rarity>0</rarity>
+	<image>oe_invisible</image>
+	<length>1</length>
+	<weaponArt>beam_1</weaponArt>
+</weaponBlueprint>
+
+<weaponBlueprint name="OE_BEAM_BIRD_SWEEP">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>1</speed>
+	<rarity>0</rarity>
+	<image>oe_invisible</image>
+	<length>200</length>
+	<weaponArt>beam_1</weaponArt>
+</weaponBlueprint>
+
+<droneBlueprint name="OE_COMBAT_BIRD_SWEEP">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Eagle Drone</title>
+	<short>Eagle</short>
+	<desc>A drone equipped with a small fabricated that creates motionless drones that fire long duration beams across the enemy ship.</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>25</speed>
+	<cost>60</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_thick</droneImage>
+	<weaponBlueprint>OE_BEAM_BIRD_SWEEP</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="OE_COMBAT_BIRD_SWEEP_DELETE">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Eagle Drone</title>
+	<short>Eagle</short>
+	<desc>A drone equipped with a small fabricated that creates motionless drones that fire long duration beams across the enemy ship.</desc>
+	<power>1</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>1</speed>
+	<cost>60</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_bomb</droneImage>
+	<weaponBlueprint>OE_BEAM_BIRD_DELETE</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+</FTL>
+<!--Multi Drone-->
+<FTL>
+<weaponBlueprint name="OE_DRONE_LASER_COMBAT_MULTI">
+	<type>LASER</type>
+	<title>Drone Laser</title>
+	<damage>1</damage>
+	<shots>1</shots>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>laser_light</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="OE_DRONE_BEAM_COMBAT_MULTI">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>10</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>45</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="OE_DRONE_WION_COMBAT_MULTI">
+	<type>LASER</type>
+	<title>Drone Weak Ion</title>
+	<damage>0</damage>
+	<ion>0</ion>
+	<speed>25</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+
+<blueprintList name="LIST_TOGGLE_OE_COMBAT_BIRD_MULTI_1">
+	<name>OE_COMBAT_BIRD_MULTI_1_LASER</name>
+	<name>OE_COMBAT_BIRD_MULTI_1_BEAM</name>
+</blueprintList>
+<blueprintList name="LIST_TOGGLE_OE_COMBAT_BIRD_MULTI_2">
+	<name>OE_COMBAT_BIRD_MULTI_2_LASER</name>
+	<name>OE_COMBAT_BIRD_MULTI_2_BEAM</name>
+</blueprintList>
+<droneBlueprint name="OE_COMBAT_BIRD_MULTI_1_LASER">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Twin Drone Mk. I [Laser]</title>
+	<short>Twin I [L]</short>
+	<desc>[CURRENT MODE: Laser] A modification of the combat drone that attaches a secondary ion cannon to the side of the drone which fires a weak ion blast alongside it's main weapon. This ion shot can only ionize shield layers and will have no effect on hit systems. The main weapon can be switched between a Laser and Beam weapon.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>10</speed>
+	<cost>65</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_multi_1_l</droneImage>
+	<weaponBlueprint>OE_DRONE_LASER_COMBAT_MULTI</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_MULTI_1_BEAM">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Twin Drone Mk. I [Beam]</title>
+	<short>Twin I [B]</short>
+	<desc>[CURRENT MODE: Beam] A modification of the combat drone that attaches a secondary ion cannon to the side of the drone which fires a weak ion blast alongside it's main weapon. This ion shot can only ionize shield layers and will have no effect on hit systems. The main weapon can be switched between a Laser and Beam weapon.</desc>
+	<power>2</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>8</speed>
+	<cost>65</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_multi_1_b</droneImage>
+	<weaponBlueprint>OE_DRONE_BEAM_COMBAT_MULTI</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_MULTI_2_LASER">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Twin Drone Mk. II [Laser]</title>
+	<short>Twin II [L]</short>
+	<desc>[CURRENT MODE: Laser] A modification of the combat drone that attaches a secondary ion cannon to the side of the drone which fires a weak ion blast alongside it's main weapon. This ion shot can only ionize shield layers and will have no effect on hit systems. The main weapon can be switched between a Laser and Beam weapon. Moves faster than the MK I.</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>20</speed>
+	<cost>90</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_multi_2_l</droneImage>
+	<weaponBlueprint>OE_DRONE_LASER_COMBAT_MULTI</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_MULTI_2_BEAM">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Twin Drone Mk. II [Beam]</title>
+	<short>Twin II [B]</short>
+	<desc>[CURRENT MODE: Beam] A modification of the combat drone that attaches a secondary ion cannon to the side of the drone which fires a weak ion blast alongside it's main weapon. This ion shot can only ionize shield layers and will have no effect on hit systems. The main weapon can be switched between a Laser and Beam weapon. Moves faster than the MK I.</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>18</speed>
+	<cost>90</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_multi_2_b</droneImage>
+	<weaponBlueprint>OE_DRONE_BEAM_COMBAT_MULTI</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+</FTL>
+<!--Multi Enemy Drone-->
+<FTL>
+<droneBlueprint name="OE_COMBAT_BIRD_MULTI_1_LASER_ENEMY">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Twin Drone Mk. I [Laser]</title>
+	<short>Twin I [L]</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>10</speed>
+	<cost>65</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_multi_1_l</droneImage>
+	<weaponBlueprint>OE_DRONE_LASER_COMBAT_MULTI</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_MULTI_1_BEAM_ENEMY">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Twin Drone Mk. I [Beam]</title>
+	<short>Twin I [B]</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>8</speed>
+	<cost>65</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_multi_1_b</droneImage>
+	<weaponBlueprint>OE_DRONE_BEAM_COMBAT_MULTI</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_MULTI_2_LASER_ENEMY">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Twin Drone Mk. II [Laser]</title>
+	<short>Twin II [L]</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<power>4</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>20</speed>
+	<cost>90</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_multi_2_l</droneImage>
+	<weaponBlueprint>OE_DRONE_LASER_COMBAT_MULTI</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_MULTI_2_BEAM_ENEMY">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Twin Drone Mk. II [Beam]</title>
+	<short>Twin II [B]</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<power>4</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>18</speed>
+	<cost>90</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_multi_2_b</droneImage>
+	<weaponBlueprint>OE_DRONE_BEAM_COMBAT_MULTI</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+</FTL>
+<!--Loot Drone-->
+<FTL>
+<weaponBlueprint name="OE_DRONE_LASER_COMBAT_MULTI_LOOT">
+	<type>LASER</type>
+	<title>Drone Laser</title>
+	<damage>1</damage>
+	<shots>1</shots>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>laser_light</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="OE_DRONE_BEAM_COMBAT_MULTI_LOOT">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<damage>1</damage>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<speed>10</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>45</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt>
+</weaponBlueprint>
+<weaponBlueprint name="OE_DRONE_LOOT_COMBAT_MULTI">
+	<type>LASER</type>
+	<title>Drone Weak Ion</title>
+	<damage>0</damage>
+	<ion>1</ion>
+	<speed>25</speed>
+	<shots>1</shots>
+	<sp>0</sp>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>ion_1_shot</image>
+	<explosion>explosion_small_ion</explosion>
+	<launchSounds>
+		<sound>ionShoot1</sound>
+		<sound>ionShoot2</sound>
+		<sound>ionShoot3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>ionHit1</sound>
+		<sound>ionHit2</sound>
+		<sound>ionHit3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>ionShields1</sound>
+		<sound>ionShields2</sound>
+		<sound>ionShields3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>ion_1</weaponArt>
+</weaponBlueprint>
+<blueprintList name="LIST_TOGGLE_OE_COMBAT_BIRD_MULTI_2_LOOT">
+	<name>OE_COMBAT_BIRD_MULTI_2_LOOT_LASER</name>
+	<name>OE_COMBAT_BIRD_MULTI_2_LOOT_BEAM</name>
+</blueprintList>
+<droneBlueprint name="OE_COMBAT_BIRD_MULTI_2_LOOT_LASER">
+	<type>COMBAT</type>
+	<tip>loot_oe_bird_1</tip>
+	<title>Twin Drone Mk. II [Laser]</title>
+	<short>Twin II [L]</short>
+	<desc>[CURRENT MODE: Laser] A modification of the combat drone that attaches a secondary ion cannon to the side of the drone which fires a weak ion blast alongside it's main weapon. This ion shot can only ionize shield layers and will have no effect on hit systems. The main weapon can be switched between a Laser and Beam weapon. Moves faster than the MK I.</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>22</speed>
+	<cost>90</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_multi_2_l_loot</droneImage>
+	<weaponBlueprint>OE_DRONE_LASER_COMBAT_MULTI_LOOT</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_MULTI_2_LOOT_BEAM">
+	<type>COMBAT</type>
+	<tip>loot_oe_bird_1</tip>
+	<title>Twin Drone Mk. II [Beam]</title>
+	<short>Twin II [B]</short>
+	<desc>[CURRENT MODE: Beam] A modification of the combat drone that attaches a secondary ion cannon to the side of the drone which fires a weak ion blast alongside it's main weapon. This ion shot can only ionize shield layers and will have no effect on hit systems. The main weapon can be switched between a Laser and Beam weapon. Moves faster than the MK I.</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>20</speed>
+	<cost>90</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_multi_2_b_loot</droneImage>
+	<weaponBlueprint>OE_DRONE_BEAM_COMBAT_MULTI_LOOT</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+</FTL>
+<!--Intel Drone-->
+<FTL>
+<weaponBlueprint name="OE_DRONE_LASER_COMBAT_SMART">
+	<type>LASER</type>
+	<title>Drone Laser</title>
+	<damage>0</damage>
+	<shots>1</shots>
+	<fireChance>0</fireChance>
+	<breachChance>0</breachChance>
+	<rarity>0</rarity>
+	<image>laser_light</image>
+	<launchSounds>
+		<sound>lightLaser1</sound>
+		<sound>lightLaser2</sound>
+		<sound>lightLaser3</sound>
+	</launchSounds>
+	<hitShipSounds>
+		<sound>hitHull2</sound>
+		<sound>hitHull3</sound>
+	</hitShipSounds>
+	<hitShieldSounds>
+		<sound>hitShield1</sound>
+		<sound>hitShield2</sound>
+		<sound>hitShield3</sound>
+	</hitShieldSounds>
+	<missSounds>
+		<sound>miss</sound>
+	</missSounds>
+	<weaponArt>laser_burst_1</weaponArt>
+</weaponBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_SMART_1">
+	<type>COMBAT</type>
+	<tip>tip_drone_generic</tip>
+	<title>Intel Drone Mk. I</title>
+	<short>Intel I</short>
+	<desc>A combat drone equipped with a pair of lasers. This specialist drone has a targetting computer onboard that enables the drone to only target enemy systems, and is weighted towards the more important systems.</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown>
+	<dodge>5</dodge>
+	<speed>9</speed>
+	<cost>70</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_smart_1</droneImage>
+	<weaponBlueprint>OE_DRONE_LASER_COMBAT_SMART</weaponBlueprint>
+	<rarity>5</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_SMART_2">
+	<type>COMBAT</type>
+	<tip>tip_drone_generic</tip>
+	<title>Intel Drone Mk. II</title>
+	<short>Intel II</short>
+	<desc>A combat drone equipped with a pair of lasers. This specialist drone has a targetting computer onboard that enables the drone to only target enemy systems, and is weighted towards the more important systems.</desc>
+	<power>4</power>
+	<cooldown>1000</cooldown>
+	<dodge>5</dodge>
+	<speed>18</speed>
+	<cost>95</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_smart_2</droneImage>
+	<weaponBlueprint>OE_DRONE_LASER_COMBAT_SMART</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+
+<droneBlueprint name="OE_COMBAT_BIRD_SMART_1_ENEMY">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Intel Drone Mk. I</title>
+	<short>Intel I</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<power>3</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>6</speed>
+	<cost>70</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_smart_1</droneImage>
+	<weaponBlueprint>OE_DRONE_LASER_COMBAT_SMART</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_SMART_2_ENEMY">
+	<type>COMBAT</type>
+	<tip>tip_toggle_combat</tip>
+	<title>Intel Drone Mk. II</title>
+	<short>Intel II</short>
+	<desc>YOU SHOULD NEVER SEE THIS</desc>
+	<power>4</power>
+	<cooldown>1000</cooldown>
+	<dodge>0</dodge>
+	<speed>12</speed>
+	<cost>95</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_smart_2</droneImage>
+	<weaponBlueprint>OE_DRONE_LASER_COMBAT_SMART</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+</FTL>
+<!--Renegade Drone-->
+<FTL>
+<weaponBlueprint name="OE_BEAM_BIRD_COMBAT_BOSS">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>1</persDamage>
+	<sp>0</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<statBoosts>
+		<statBoost name="deathEffect" load="OE_BIO_DRONE_DEATHEFF" />
+	</statBoosts>
+	<speed>30</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>300</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt>
+</weaponBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_BOSS">
+	<type>COMBAT</type>
+	<tip>tip_drone_generic</tip>
+	<title>Scourge Drone</title>
+	<short>Scourge</short>
+	<desc>A drone that specifically targets enemy crewmembers. Beam does 15 personal damage and inflicts enemy crew with a death effect that does 2 system damage and creates a fire, lasts for 20 seconds.</desc>
+	<power>2</power>
+	<cooldown>100</cooldown>
+	<dodge>0</dodge>
+	<speed>80</speed>
+	<cost>100</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_boss</droneImage>
+	<weaponBlueprint>OE_BEAM_BIRD_COMBAT_BOSS</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+<weaponBlueprint name="OE_BEAM_BIRD_COMBAT_BOSS_CHAOS">
+	<type>BEAM</type>
+	<tip>tip_beams</tip>
+	<title>Drone Beam</title>
+	<damage>0</damage>
+	<sysDamage>0</sysDamage>
+	<persDamage>1</persDamage>
+	<sp>16</sp>
+	<fireChance>1</fireChance>
+	<breachChance>0</breachChance>
+	<statBoosts>
+		<statBoost name="deathEffect" load="OE_BIO_DRONE_DEATHEFF" />
+	</statBoosts>
+	<speed>30</speed>
+	<rarity>0</rarity>
+	<image>beam_contact</image>
+	<length>300</length>
+	<launchSounds>
+		<sound>beam1</sound>
+		<sound>beam1_2</sound>
+	</launchSounds>
+	<weaponArt>beam_1</weaponArt>
+</weaponBlueprint>
+<droneBlueprint name="OE_COMBAT_BIRD_BOSS_CHAOS">
+	<type>COMBAT</type>
+	<tip>tip_drone_generic</tip>
+	<title>Chaotic Scourge Drone</title>
+	<short>Scourge™</short>
+	<desc>A drone that specifically targets enemy crewmembers. Beam does 15 personal damage and inflicts enemy crew with a death effect that does 2 system damage and creates a fire, lasts for 20 seconds.
+Chaotic variant has full shield pierce.</desc>
+	<power>2</power>
+	<cooldown>100</cooldown>
+	<dodge>0</dodge>
+	<speed>80</speed>
+	<cost>100</cost>
+	<bp>3</bp>
+	<droneImage>drone_oe_bird_boss_chaos</droneImage>
+	<weaponBlueprint>OE_BEAM_BIRD_COMBAT_BOSS_CHAOS</weaponBlueprint>
+	<rarity>0</rarity>
+	<iconImage>combat</iconImage>
+</droneBlueprint>
+</FTL>
+
+<!--Lab Upgrades-->
+<FTL>
+<augBlueprint name="LAB_OE_BIRD_INSTALLED">
+	<title>Gi</title>
+	<desc>Gi upgrade installed.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="LAB_OE_BIRD_ESCAPESPEED">
+	<title>Flight from Danger</title>
+	<desc>Gi Crew gain 4x move speed in the presence of enemy crew.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="LAB_OE_BIRD_AUTODESTROY">
+	<title>Auto Disassembly</title>
+	<desc>Gi Crew damage enemy drones and metal crew at 5hp/s.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+<augBlueprint name="LAB_OE_BIRD_SOCIAL">
+	<title>Socialization</title>
+	<desc>Gi Crew gain 0.25x repair speed and 0.1x combat damage for each friendly crewmember in the same room.</desc>
+	<cost>0</cost>
+	<rarity>0</rarity>
+	<stackable>false</stackable>
+</augBlueprint>
+
+</FTL>
+
+<!--Crew-->
+<FTL>
+<crewBlueprint name="oe_bird">
+	<desc>A feathered race obsessed with technology, especially drones. Possesses the unique ability to provide a passive repair rate to the current room.</desc>
+	<cost>40</cost>
+	<title>Gi</title>
+	<short>Gi</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Max Health is reduced to 80</power>
+		<power>Autorepairs the current system at 0.5x repair speed</power>
+		<power>Move speed increased to 2x while there are no hostile crew in the room</power>
+	</powerList>
+	<colorList>
+		<layer>
+			<!--fluff-->
+			<color r="255" g="255" b="255" a="0.8" />
+			<!--lightened-->
+			<color r="90" g="60" b="40" a="0.8" />
+			<!--darkened-->
+			<color r="255" g="124" b="89" a="0" />
+			<!--base-->
+			<color r="255" g="255" b="255" a="0" />
+		</layer>
+	</colorList>
+</crewBlueprint>
+
+<crewBlueprint name="oe_bird_tech">
+	<desc>Elite Gi Crew. Specially trained drone technicians that adapt well to any situation.</desc>
+	<cost>60</cost>
+	<title>Gi Technician</title>
+	<short>Technician</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Autorepairs the current system at 1x repair speed</power>
+		<power>Friendly Drones in the current room heal at 3hp/s</power>
+		<power>Move speed increased to 2x while there are no hostile crew in the room</power>
+	</powerList>
+</crewBlueprint>
+
+<crewBlueprint name="unique_oe_jay">`
+	<desc>The chief Gi engineer responsible for designing some of the powerful drones the Gi use.</desc>
+	<cost>100</cost>
+	<title>Chief Engineer</title>
+	<short>Engineer</short>
+	<rarity>0</rarity>
+	<powerList>
+		<power>Max Health is incresed to 120</power>
+		<power>Autorepairs the entire ship at 1x repair speed</power>
+		<power>Autorepairs the current system at an additional 0.5x repair speed</power>
+		<power>Friendly Drones in the current room heal at 3hp/s</power>
+		<power>Move speed increased to 2x while there are no hostile crew in the room</power>
+	</powerList>
+</crewBlueprint>
+</FTL>
+
+<!--Renegades-->
+<FTL>
+</FTL>

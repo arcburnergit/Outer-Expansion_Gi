@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FTL>	
+<event name="BOON_SELECT_OE_BIRD">
+	<text>From nowhere, you hear a voice speaking to you. "The Boon... of Feathers. Your Gi crew will... gain an additional 0.25x to their auto repair speed. You may... thank the previous challenger. Or maybe you... do not? Who can say..."</text>
+	<hiddenAug>BOON_CREW_OE_BIRD</hiddenAug>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event>
+			<loadEvent>BOON_SELECT_CONTINUE</loadEvent>
+		</event>
+	</choice>
+</event>
+</FTL>

@@ -1,0 +1,379 @@
+<FTL>
+<mod:findLike type="scripts" limit="1" reverse="false">
+  <mod-append:script>data/oe_scripts/core_bird.lua</mod-append:script>
+  <mod-append:script>data/oe_scripts/bird_drones.lua</mod-append:script>
+</mod:findLike>
+
+<mod:findLike type="ships" limit="1" reverse="false">
+	<mod:findLike type="shipOrder">
+		<mod:setAttributes oe_has_half="false"/>
+	</mod:findLike>
+	<mod:findWithChildLike type="shipOrder" child-type="empty">
+		<mod:selector oe="true"/>
+		<mod:setAttributes oe_has_half="true"/>
+	</mod:findWithChildLike>
+	<mod:findLike type="shipOrder">
+		<mod:selector oe_has_half="true"/>
+		<mod:findLike type="empty">
+			<mod:selector oe="true"/>
+			<mod:removeTag/>
+		</mod:findLike>
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+		
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod:removeAttributes oe_has_half="" />
+	</mod:findLike>
+	<mod:findLike type="shipOrder">
+		<mod:selector oe_has_half="false"/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+		<mod-append:empty/>
+		
+		<mod-append:empty oe="true"/>
+		<mod-append:empty oe="true"/>
+		<mod-append:empty oe="true"/>
+		<mod-append:empty oe="true"/>
+
+		<mod-append:empty oe="true"/>
+		<mod-append:empty oe="true"/>
+		<mod:removeAttributes oe_has_half="" />
+	</mod:findLike>
+</mod:findLike>
+
+<mod:findLike type="crew" limit="1" reverse="false">
+	<mod-append:race name="oe_bird">
+		<maxHealth>80</maxHealth>
+    	<moveSpeedMultiplier>2</moveSpeedMultiplier>
+    	<repairSpeed>1</repairSpeed>
+    	<animBase>human</animBase>
+    	<deathSounds>
+    		<deathSound>death1</deathSound>
+    		<deathSound>death2</deathSound>
+    	</deathSounds>
+		<passiveStatBoosts>  
+			<statBoost name="statBoost">
+				<statBoost name="moveSpeedMultiplier">
+                    <boostType>FLAT</boostType>
+					<amount>-1</amount>
+                    <shipTarget>CURRENT_ROOM</shipTarget>
+                    <crewTarget>ENEMIES</crewTarget>
+					<whiteList>
+						<oe_bird />
+					</whiteList>
+					<maxStacks>1</maxStacks>
+                </statBoost>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+				<maxStacks>1</maxStacks>
+			</statBoost>
+		</passiveStatBoosts>
+	</mod-append:race>
+    <mod-append:race name="oe_bird_tech">
+    	<maxHealth>100</maxHealth>
+    	<moveSpeedMultiplier>2</moveSpeedMultiplier>
+    	<repairSpeed>1</repairSpeed>
+    	<animBase>human</animBase>
+    	<deathSounds>
+    		<deathSound>death1</deathSound>
+    		<deathSound>death2</deathSound>
+    	</deathSounds>
+		<passiveStatBoosts>  
+			<statBoost name="statBoost">
+				<statBoost name="moveSpeedMultiplier">
+                    <boostType>FLAT</boostType>
+					<amount>-1</amount>
+                    <shipTarget>CURRENT_ROOM</shipTarget>
+                    <crewTarget>ENEMIES</crewTarget>
+					<whiteList>
+						<oe_bird_tech />
+					</whiteList>
+					<maxStacks>1</maxStacks>
+                </statBoost>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+				<maxStacks>1</maxStacks>
+			</statBoost>
+			<statBoost name="trueHealAmount">
+				<boostType>FLAT</boostType>
+				<amount>3</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>DRONES</droneTarget>
+				<priority>0</priority>
+			</statBoost>
+		</passiveStatBoosts>
+    </mod-append:race>
+	<mod-append:race name="unique_oe_jay">
+    	<maxHealth>140</maxHealth>
+    	<moveSpeedMultiplier>2</moveSpeedMultiplier>
+    	<repairSpeed>1</repairSpeed>
+    	<animBase>human</animBase>
+    	<deathSounds>
+    		<deathSound>death1</deathSound>
+    		<deathSound>death2</deathSound>
+    	</deathSounds>
+		<passiveStatBoosts>  
+			<statBoost name="statBoost">
+				<statBoost name="moveSpeedMultiplier">
+                    <boostType>FLAT</boostType>
+					<amount>-1</amount>
+                    <shipTarget>CURRENT_ROOM</shipTarget>
+                    <crewTarget>ENEMIES</crewTarget>
+					<whiteList>
+						<unique_oe_jay />
+					</whiteList>
+					<maxStacks>1</maxStacks>
+                </statBoost>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+				<maxStacks>1</maxStacks>
+			</statBoost>
+			<statBoost name="trueHealAmount">
+				<boostType>FLAT</boostType>
+				<amount>3</amount>
+				<shipTarget>CURRENT_ROOM</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<droneTarget>DRONES</droneTarget>
+				<priority>0</priority>
+			</statBoost>
+		</passiveStatBoosts>
+    </mod-append:race>
+</mod:findLike>
+
+<mod:findLike type="augments" limit="1" reverse="false">
+	<mod-append:aug name="LAB_OE_BIRD_ESCAPESPEED">
+    	<statBoosts>
+			<statBoost name="statBoost">
+				<statBoost name="moveSpeedMultiplier">
+					<boostType>MULT</boostType>
+					<amount>4</amount>
+					<maxStacks>1</maxStacks>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ENEMIES</crewTarget>
+					<droneTarget>CREW</droneTarget>
+					<priority>999</priority>
+					<whiteList load="LIST_CREW_AEA_BIRD" />
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ENEMIES</crewTarget>
+			</statBoost>
+		</statBoosts>
+	</mod-append:aug>
+	<mod-append:aug name="LAB_OE_BIRD_AUTODESTROY">
+    	<statBoosts>
+			<statBoost name="statBoost">
+				<statBoost name="trueHealAmount">
+					<boostType>FLAT</boostType>
+					<amount>-5</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ENEMIES</crewTarget>
+					<droneTarget>CREW</droneTarget>
+					<priority>999</priority>
+					<whiteList load="LIST_CREW_METAL" />
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<whiteList load="LIST_CREW_AEA_BIRD" />
+			</statBoost>
+			<statBoost name="statBoost">
+				<statBoost name="trueHealAmount">
+					<boostType>FLAT</boostType>
+					<amount>-5</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ENEMIES</crewTarget>
+					<droneTarget>DRONES</droneTarget>
+					<priority>999</priority>
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+				<whiteList load="LIST_CREW_AEA_BIRD" />
+			</statBoost>
+		</statBoosts>
+	</mod-append:aug>
+	<mod-append:aug name="LAB_OE_BIRD_SOCIAL">
+    	<statBoosts>
+			<statBoost name="statBoost">
+				<statBoost name="repairSpeed">
+					<boostType>FLAT</boostType>
+					<amount>0.25</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList load="LIST_CREW_AEA_BIRD" />
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+			</statBoost>
+			<statBoost name="statBoost">
+				<statBoost name="damageMultiplier">
+					<boostType>FLAT</boostType>
+					<amount>0.1</amount>
+					<shipTarget>CURRENT_ROOM</shipTarget>
+					<crewTarget>ALLIES</crewTarget>
+					<affectsSelf>false</affectsSelf>
+					<priority>0</priority>
+					<whiteList load="LIST_CREW_AEA_BIRD" />
+				</statBoost>
+				<shipTarget>ALL</shipTarget>
+				<crewTarget>ALLIES</crewTarget>
+			</statBoost>
+		</statBoosts>
+	</mod-append:aug>
+</mod:findLike>
+
+<events>
+	<variable name="ach_crew_oe_jay" op="set" val="0"/>
+	<variable name="ach_trans_oe_bird" op="set" val="0" />
+	<variable name="ach_ren_oe_bird" op="set" val="0"/>
+
+	<variable name="sec_unique_oe_bird" op="set" val="0"/>
+	<metaVariable name="juke_oe_bird" op="set" val="0" />
+
+	<metaVariable name="prof_z_boon_oe_bird" op="set" val="0" />
+	
+  	<!--eventFile>special_oe_bird</eventFile-->
+  	<!--eventFile>sector_oe_bird</eventFile-->
+</events>
+
+<mod:findLike type="events" limit="1" reverse="false">
+	<mod:findName type="req" name="LIST_START_CRATE_CHECK">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_START_AUG_CHECK">
+	</mod:findName>
+	<mod:findName type="req" name="COORDS">
+	</mod:findName>
+	<mod:findName type="req" name="COORDS_BOSS">
+	</mod:findName>
+	<mod:findName type="req" name="COORDS_BOSS_TOOLATE">
+	</mod:findName>
+	<mod:findName type="req" name="OUTLIER_SECTOR">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_UPG_ARMS">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_UPG_ALL">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_LAB_ALL">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_UPG_SEALANT">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_UPG_EXTINGUISHERS">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_UPG_ION">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_HUMANS">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_ENGI">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_ZOLTAN">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_ORCHID">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_ROCK">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_CRYSTAL">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_MANTIS">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_FREEMANTIS">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_SLUG">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_SHELL">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_LEECH">
+	</mod:findName>
+	<mod:findName type="req" name="HS_LIST_LANIUS">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_CREW_INTERACTIBLE">
+	</mod:findName>
+	<mod:findName type="req" name="BLUELIST_CREW_NO2">
+	</mod:findName>
+	<mod:findName type="req" name="BLUELIST_CREW_NO2_CONSTANT">
+	</mod:findName>
+	<mod:findName type="req" name="BLUELIST_CREW_NOFIRE">
+	</mod:findName>
+	<mod:findName type="req" name="BLUELIST_CREW_STRONG">
+	</mod:findName>
+	<mod:findName type="req" name="BLUELIST_CREW_NODOORS">
+	</mod:findName>
+	<mod:findName type="req" name="REBEL_SHIP">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_CHECK_ANY_CREW">
+		<mod-append:req type="any" load="LIST_CREW_OE_ACID"/>
+	</mod:findName>
+	<mod:findName type="req" name="COUNT_ALL_CREW">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_CHECK_AUGMENTS">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_CHECK_TOGGLES_AND_AMPS">
+	</mod:findName>
+	<mod:findName type="req" name="LIST_CHECK_ENERGY_SHIELD">
+	</mod:findName>
+	<mod:findName type="req" name="ANY_BOON">
+		<mod-append:name>prof_z_boon_oe_bird</mod-append:name>
+	</mod:findName>
+	<mod:findName type="req" name="ALL_BOON">
+		<mod-append:name>prof_z_boon_oe_bird</mod-append:name>
+	</mod:findName>
+</mod:findLike>
+
+
+<store>
+</store>
+
+<mod:findLike type="achievements" limit="1" reverse="false">
+	<mod:findLike type="page">
+		<mod:findLike type="section">
+			<mod:selector text="The Outer Cluster"/>
+		</mod:findLike>
+		<mod:findLike type="section">
+			<mod:selector text="Unique Crew (OE)"/>
+			<mod-append:achievement name="ACH_OE_CREW_JAY">
+				<name>Repair Arms</name>
+				<secretDescription>Help a master engineer with her auto-ship problem.</secretDescription>
+				<description>Dismantle a large rebel auto-ship and recruit Jay.</description>
+				<header>Character Recruited</header>
+				<icon>ach_oe_crew_jay</icon>
+				<variable name="ach_crew_oe_jay" amount="1"/>
+				<sound>achievement</sound>
+			</mod-append:achievement>
+		</mod:findLike>
+		<mod:findLike type="section">
+			<mod:selector text="Loot Transports (OE)"/>
+		</mod:findLike>
+		<mod:findLike type="section">
+			<mod:selector text="Renegade Cruisers (OE)"/>
+		</mod:findLike>
+		<mod:findLike type="section">
+			<mod:selector text="Music (OE)"/>
+			<mod-append:achievement name="MUSIC_OE_BIRD">
+				<name>Gi</name>
+				<description id="jukebox_unlocked" />
+				<secretDescription id="jukebox_locked" />
+				<header id="jukebox_header" />
+				<icon>music_unlocked</icon>
+				<variable name="juke_oe_bird" amount="1" />
+				<multiDifficulty>false</multiDifficulty>
+			</mod-append:achievement>
+		</mod:findLike>
+		<mod:findLike type="section">
+			<mod:selector text="Thest's Boons (OE)"/>
+			<mod-append:achievement name="ACH_BOON_OE_BIRD">
+				<name>Boon of Feathers</name>
+				<secretDescription>Receive the Boon of Feathers from Thest.</secretDescription>
+				<description>Show a Gi crew to Thest. 
+				While in effect; Gi crew gain an additional 0.25x to their auto repair speed.</description>
+				<header>Boon Received</header>
+				<icon>ach_boon_oe_bird</icon>
+				<multiDifficulty>false</multiDifficulty>
+			</mod-append:achievement>
+		</mod:findLike>
+	</mod:findLike>
+</mod:findLike>
+</FTL>

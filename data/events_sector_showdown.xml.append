@@ -1,0 +1,18 @@
+<FTL>
+<mod:findName type="event" name="TRUE_VICTORY_CREW">
+	<mod-append:choice hidden="true" req="unique_oe_jay">
+		<text>Ask Jay about this.</text>
+		<event load="TRUE_VICTORY_CREW_OE_JAY" />
+	</mod-append:choice>
+</mod:findName>
+
+<event name="TRUE_VICTORY_CREW_OE_JAY">
+	<text>"Well, if you don't end up detonating the bomb, can I atleast try and disassemble it? I want to know how it works!"</text>
+	<text-oe-alternative>"What I wouldn't give to get my hands and a good engineering bay on that wreck, ah well, we've got a rebel flagship to destroy."</text-oe-alternative>
+	<unlockCustomShip silent="false">PLAYER_SHIP_OE_BIRD_CREW1</unlockCustomShip>
+	<choice hidden="true">
+		<text>Continue...</text>
+		<event load="TRUE_VICTORY_LOAD" />
+	</choice>
+</event>
+</FTL>

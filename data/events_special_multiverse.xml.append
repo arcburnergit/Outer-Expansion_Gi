@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FTL>
+<mod:findName type="event" name="SYLVAN_TRADES_DROPPOINT">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="SYLVAN_OE_DRONES"/>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES_LASTSTAND">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="SYLVAN_OE_DRONES"/>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES">
+    <mod:findLike type="loadEventList">
+        <mod-append:event name="SYLVAN_OE_DRONES"/>
+        <mod-append:event name="SYLVAN_OE_LOOT" req="loc_sector_count" lvl="3" />
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES_DROPPOINT">
+    <mod:findLike type="loadEventList">
+        <mod:findName name="SYLVAN_OE_DRONES" reverse="false" start="1">
+			<mod:removeTag />
+		</mod:findName>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES_LASTSTAND">
+    <mod:findLike type="loadEventList">
+        <mod:findName name="SYLVAN_OE_DRONES" reverse="false" start="1">
+			<mod:removeTag />
+		</mod:findName>
+    </mod:findLike>
+</mod:findName>
+<mod:findName type="event" name="SYLVAN_TRADES_DROPPOINT">
+    <mod:findLike type="loadEventList">
+        <mod:findName name="SYLVAN_OE_DRONES" reverse="false" start="1">
+			<mod:removeTag />
+		</mod:findName>
+        <mod:findName name="SYLVAN_OE_LOOT" reverse="false" start="1">
+			<mod:removeTag />
+		</mod:findName>
+    </mod:findLike>
+</mod:findName>
+
+
+<mod:findName type="event" name="THE_JUDGES_ZOLTAN">
+	<mod-append:choice hidden="true" req="LIST_CREW_OE_BIRD" blue="false">
+		<text>Present a Gi Crewmember.</text>
+		<event>
+			<text>"Engineers... Drone mechanics, each new model a marvel. Someone to keep drones... and ships, in top shape. Gi are... allied to Federation, but recruiting... one of the greatest of their Technicians is a grand achievement. Yes, I am... impressed. Expect... rewards before your next journey."</text>
+			<metaVariable name="prof_z_boon_oe_bird" op="set" val="1" />
+			<achievement silent="false">ACH_BOON_OE_BIRD</achievement>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="THE_JUDGES_ZOLTAN_ADVICE" />
+			</choice>
+		</event>
+	</mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="THE_JUDGES_VARIABLE_CLEAR">
+    <mod-append:metaVariable name="prof_z_boon_oe_bird" op="set" val="0" />
+</mod:findName>
+
+</FTL> 
+
+<FTL>
+</FTL>

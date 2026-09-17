@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FTL>
+
+<mod:findName name="STORAGE_CHECK_CREW_REAL">
+	<mod-append:choice req="unique_oe_jay" blue="false" hidden="true">
+		<text>Look for Jay.</text>
+		<event load="SOCIALIZE_OE_JAY_LIST"/>
+	</mod-append:choice>
+</mod:findName>
+
+<mod:findName type="event" name="COMBAT_CHECK_TOGGLE">
+	<mod-append:choice req="OE_COMBAT_BIRD_BURST_1" blue="false">
+		<text>(Amp Burst) Set the state of the drone. [Current power: 2].</text>
+		<event load="COMBAT_CHECK_OE_BIRD_BURST_AMP_1" />
+	</mod-append:choice>
+	<mod-append:choice req="OE_COMBAT_BIRD_BURST_2" blue="false">
+		<text>(Amp Burst) Set the state of the drone. [Current power: 3].</text>
+		<event load="COMBAT_CHECK_OE_BIRD_BURST_AMP_2" />
+	</mod-append:choice>
+	<mod-append:choice req="OE_COMBAT_BIRD_BURST_3" blue="false">
+		<text>(Amp Burst) Set the state of the drone. [Current power: 4].</text>
+		<event load="COMBAT_CHECK_OE_BIRD_BURST_AMP_3" />
+	</mod-append:choice>
+	
+	<mod-append:choice req="OE_COMBAT_BIRD_MULTI_1_LASER" blue="false">
+		<text>(Twin Drone I) Set the state of the drone. [Current mode: Laser].</text>
+		<event load="COMBAT_CHECK_OE_BIRD_MULTI_1_LASER" />
+	</mod-append:choice>
+	<mod-append:choice req="OE_COMBAT_BIRD_MULTI_1_BEAM" blue="false">
+		<text>(Twin Drone I) Set the state of the drone. [Current mode: Beam].</text>
+		<event load="COMBAT_CHECK_OE_BIRD_MULTI_1_BEAM" />
+	</mod-append:choice>
+	
+	<mod-append:choice req="OE_COMBAT_BIRD_MULTI_2_LASER" blue="false">
+		<text>(Twin Drone II) Set the state of the drone. [Current mode: Laser].</text>
+		<event load="COMBAT_CHECK_OE_BIRD_MULTI_2_LASER" />
+	</mod-append:choice>
+	<mod-append:choice req="OE_COMBAT_BIRD_MULTI_2_BEAM" blue="false">
+		<text>(Twin Drone II) Set the state of the drone. [Current mode: Beam].</text>
+		<event load="COMBAT_CHECK_OE_BIRD_MULTI_2_BEAM" />
+	</mod-append:choice>
+	
+	<mod-append:choice req="OE_COMBAT_BIRD_MULTI_2_LOOT_LASER" blue="false">
+		<text>(Twin Drone II [GI LOOT]) Set the state of the drone. [Current mode: Laser].</text>
+		<event load="COMBAT_CHECK_OE_BIRD_MULTI_2_LOOT_LASER" />
+	</mod-append:choice>
+	<mod-append:choice req="OE_COMBAT_BIRD_MULTI_2_LOOT_BEAM" blue="false">
+		<text>(Twin Drone II [GI LOOT]) Set the state of the drone. [Current mode: Beam].</text>
+		<event load="COMBAT_CHECK_OE_BIRD_MULTI_2_LOOT_BEAM" />
+	</mod-append:choice>
+</mod:findName>
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+					AMP BURST
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->	
+<event name="COMBAT_CHECK_OE_BIRD_BURST_AMP_1">
+	<text>What power do you want to set the drone to?
+	Current stats; [projectiles: 2, speed 10].</text>
+	<choice hidden="true">
+		<text>Set the drone to 3 power. [projectiles: 3, speed: 8].</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_BURST_1" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_BURST_2" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Set the drone to 4 power. [projectiles: 4, speed: 6].</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_BURST_1" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_BURST_3" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+	</choice>
+</event>
+<event name="COMBAT_CHECK_OE_BIRD_BURST_AMP_2">
+	<text>What power do you want to set the drone to?
+	Current stats; [projectiles: 3, speed 8].</text>
+	<choice hidden="true">
+		<text>Set the drone to 2 power. [projectiles: 2, speed: 10].</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_BURST_2" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_BURST_1" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Set the drone to 4 power. [projectiles: 4, speed: 6].</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_BURST_2" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_BURST_3" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+	</choice>
+</event>
+<event name="COMBAT_CHECK_OE_BIRD_BURST_AMP_3">
+	<text>What power do you want to set the drone to?
+	Current stats; [projectiles: 4, speed 6].</text>
+	<choice hidden="true">
+		<text>Set the drone to 2 power. [projectiles: 2, speed: 10].</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_BURST_3" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_BURST_1" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Set the drone to 3 power. [projectiles: 3, speed: 8].</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_BURST_3" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_BURST_2" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+	</choice>
+</event>
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+					TWIN LASER/BEAM DRONE 1
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->	
+<event name="COMBAT_CHECK_OE_BIRD_MULTI_1_LASER">
+	<text>Are you sure you want to change the drone's settings?.</text>
+	<choice hidden="true">
+		<text>Set the drone to Beam Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_MULTI_1_LASER" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_MULTI_1_BEAM" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+	</choice>
+</event>
+<event name="COMBAT_CHECK_OE_BIRD_MULTI_1_BEAM">
+	<text>Are you sure you want to change the drone's settings?.</text>
+	<choice hidden="true">
+		<text>Set the drone to Laser Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_MULTI_1_BEAM" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_MULTI_1_LASER" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+	</choice>
+</event>
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+					TWIN LASER/BEAM DRONE 2
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->	
+<event name="COMBAT_CHECK_OE_BIRD_MULTI_2_LASER">
+	<text>Are you sure you want to change the drone's settings?.</text>
+	<choice hidden="true">
+		<text>Set the drone to Beam Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_MULTI_2_LASER" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_MULTI_2_BEAM" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+	</choice>
+</event>
+<event name="COMBAT_CHECK_OE_BIRD_MULTI_2_BEAM">
+	<text>Are you sure you want to change the drone's settings?.</text>
+	<choice hidden="true">
+		<text>Set the drone to Laser Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_MULTI_2_BEAM" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_MULTI_2_LASER" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+	</choice>
+</event>
+
+
+<!--
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+					TWIN LASER/BEAM DRONE 2 LOOT
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->	
+<event name="COMBAT_CHECK_OE_BIRD_MULTI_2_LOOT_LASER">
+	<text>Are you sure you want to change the drone's settings?.</text>
+	<choice hidden="true">
+		<text>Set the drone to Beam Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_MULTI_2_LOOT_LASER" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="OE_COMBAT_BIRD_MULTI_2_LOOT_BEAM" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+	</choice>
+</event>
+<event name="COMBAT_CHECK_OE_BIRD_MULTI_2_LOOT_BEAM">
+	<text>Are you sure you want to change the drone's settings?.</text>
+	<choice hidden="true">
+		<text>Set the drone to Laser Mode.</text>
+		<event>
+			<text>You start calibrating the drone...</text>
+			<remove name="OE_COMBAT_BIRD_MULTI_2_LOOT_BEAM" />
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event>
+					<text>You finish calibrating the drone successfully.</text>
+					<drone name="AEA_COMBAT_BIRD_MULTI_2_LOOT_LASER" />
+					<choice hidden="true">
+						<text>Continue...</text>
+						<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+					</choice>
+				</event>
+			</choice>
+		</event>
+	</choice>
+	<choice hidden="true">
+		<text>Return to the toggle menu.</text>
+		<event load="COMBAT_CHECK_TOGGLE_LOAD" />
+	</choice>
+</event>
+
+<mod:findName type="event" name="STORAGE_CHECK_LAB">
+	<mod-append:choice req="LIST_CREW_OE_BIRD" blue="false" hidden="true">
+	  <text>Gi.</text>
+	  <event load="STORAGE_CHECK_LAB_OE_BIRD" />
+	</mod-append:choice>
+</mod:findName>
+<event name="STORAGE_CHECK_LAB_OE_BIRD">
+	<text>You are viewing the lab menu for: [GI]</text>
+	<choice req="LAB_OE_BIRD_ESCAPESPEED" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: Flight from Danger.
+		[Gi Crew gain 4x move speed in the presence of enemy crew]</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="LAB_OE_BIRD_AUTODESTROY" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: Auto Disassembly.
+		[Gi Crew damage enemy drones and metal crew at 5hp/s]</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="LAB_OE_BIRD_SOCIAL" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: Socialization.
+		[Gi Crew gain 0.25x repair speed and 0.1x combat damage for each friendly crewmember in the same room]</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="pilot" lvl="1" max_group="0" blue="false" hidden="true">
+		<text>Currently Installed: None</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="LAB_OE_BIRD_INSTALLED" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Pri: Flight from Danger. [An upgrade is already installed]</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="LAB_OE_BIRD_INSTALLED" lvl="0" max_group="1" blue="false" hidden="true">
+		<text>Pri: Flight from Danger. [Cost: 20~]</text>
+		<event load="STORAGE_CHECK_LAB_OE_BIRD_ESCAPESPEED" />
+	</choice>
+	<choice req="LAB_OE_BIRD_INSTALLED" lvl="1" max_group="2" blue="false" hidden="true">
+		<text>Pri: Auto Disassembly. [An upgrade is already installed]</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="LAB_OE_BIRD_INSTALLED" lvl="0" max_group="2" blue="false" hidden="true">
+		<text>Pri: Auto Disassembly. [Cost: 15~ 3|]</text>
+		<event load="STORAGE_CHECK_LAB_OE_BIRD_AUTODESTROY" />
+	</choice>
+	<choice req="LAB_OE_BIRD_INSTALLED" lvl="1" max_group="3" blue="false" hidden="true">
+		<text>Pri: Socialization. [An upgrade is already installed]</text>
+		<event load="OPTION_INVALID" />
+	</choice>
+	<choice req="LAB_OE_BIRD_INSTALLED" lvl="0" max_group="3" blue="false" hidden="true">
+		<text>Pri: Socialization. [Cost: 20~ 3{]</text>
+		<event load="STORAGE_CHECK_LAB_OE_BIRD_SOCIAL" />
+	</choice>
+	<choice req="pilot" lvl="1" max_group="999" blue="false" hidden="true">
+		<text>Go back.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD" />
+	</choice>
+</event>
+
+
+<event name="STORAGE_CHECK_LAB_OE_BIRD_ESCAPESPEED">
+	<text>You are about to install the Flight from Danger modification.
+	[Effects: Gi Crew gain 4x move speed in the presence of enemy crew]
+	
+	[Warning: After installing this, you will not be able to install any more primary upgrades for Gi crew. You will not be able to deactivate this mod either.]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 20~]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="scrap" min="-20" max="-20" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_LAB_OE_BIRD_ESCAPESPEED" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD" />
+	</choice>
+</event>
+<event name="INSTALL_LAB_OE_BIRD_ESCAPESPEED">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_OE_BIRD_ESCAPESPEED</hiddenAug>
+	<hiddenAug>LAB_OE_BIRD_INSTALLED</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_OE_BIRD</loadEvent>
+</event>
+<event name="STORAGE_CHECK_LAB_OE_BIRD_AUTODESTROY">
+	<text>You are about to install the Auto Disassembly modification.
+	[Effects: Gi Crew damage enemy drones and metal crew at 5hp/s]
+	
+	[Warning: After installing this, you will not be able to install any more primary upgrades for Gi crew. You will not be able to deactivate this mod either.]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 15~ 3|]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="scrap" min="-15" max="-15" />
+				<item type="drones" min="-3" max="-3" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_LAB_OE_BIRD_AUTODESTROY" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD" />
+	</choice>
+</event>
+<event name="INSTALL_LAB_OE_BIRD_AUTODESTROY">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_OE_BIRD_AUTODESTROY</hiddenAug>
+	<hiddenAug>LAB_OE_BIRD_INSTALLED</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_OE_BIRD</loadEvent>
+</event>
+
+<event name="STORAGE_CHECK_LAB_OE_BIRD_SOCIAL">
+	<text>You are about to install the Socialization modification.
+	[Effects: Gi Crew gain 0.25x repair speed and 0.1x combat damage for each friendly crewmember in the same room]
+	
+	[Warning: After installing this, you will not be able to install any more primary upgrades for Gi crew. You will not be able to deactivate this mod either.]</text>
+	<choice hidden="true">
+		<text>Install the modification. [Cost: 20~ 3{]</text>
+		<event>
+			<text>You install the modification.</text>
+			<item_modify>
+				<item type="scrap" min="-20" max="-20" />
+				<item type="fuel" min="-3" max="-3" />
+			</item_modify>
+			<choice hidden="true">
+				<text>Continue...</text>
+				<event load="INSTALL_LAB_OE_BIRD_SOCIAL" />
+			</choice>
+		</event>
+	</choice>
+	<choice req="pilot" lvl="1" max_group="1" blue="false" hidden="true">
+		<text>Nevermind.</text>
+		<event load="STORAGE_CHECK_LAB_LOAD" />
+	</choice>
+</event>
+<event name="INSTALL_LAB_OE_BIRD_SOCIAL">
+	<variable name="loc_lab_upgrades" op="add" val="1" />
+	<hiddenAug>LAB_OE_BIRD_SOCIAL</hiddenAug>
+	<hiddenAug>LAB_OE_BIRD_INSTALLED</hiddenAug>
+	<loadEvent>STORAGE_CHECK_LAB_OE_BIRD</loadEvent>
+</event>
+</FTL>

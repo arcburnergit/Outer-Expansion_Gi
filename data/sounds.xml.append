@@ -1,0 +1,9 @@
+<FTL>
+<music>
+	<track>
+		<name>oe_bird</name> <!--Music by lizzard-->
+		<explore>oe_MUS_BirdExplore.ogg</explore>
+		<combat>oe_MUS_BirdBattle.ogg</combat>
+	</track>
+</music>
+</FTL>
