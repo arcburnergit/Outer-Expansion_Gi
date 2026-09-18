@@ -1,13 +1,13 @@
 <FTL>
 <blueprintList name="LIST_CREW_OE_BIRD">
-    <name>oe_acid_worker</name>
-    <name>oe_acid_soldier</name>
-    <name>unique_oe_bill</name>
+    <name>oe_bird</name>
+    <name>oe_bird_tech</name>
+    <name>unique_oe_jay</name>
 </blueprintList>
 
 <blueprintList name="LIST_CREW_OE_BIRD_ER">
-    <name>oe_acid_soldier</name>
-    <name>unique_oe_bill</name>
+    <name>oe_bird_tech</name>
+    <name>unique_oe_jay</name>
 </blueprintList>
 
 
